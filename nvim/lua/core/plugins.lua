@@ -30,8 +30,8 @@ return packer.startup(function(use)
 
 
     -- use "ziontee113/color-picker.nvim"
-    -- use 'nvim-telescope/telescope.nvim'
 
+    use 'nvim-telescope/telescope.nvim'
 
 
     use 'wbthomason/packer.nvim'
@@ -50,9 +50,8 @@ return packer.startup(function(use)
     use 'L3MON4D3/LuaSnip'
     use  'saadparwaiz1/cmp_luasnip'
     use  "rafamadriz/friendly-snippets"
-    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end}
+
+    use "akinsho/toggleterm.nvim"
 
     use 'kylechui/nvim-surround'
     use "windwp/nvim-autopairs"

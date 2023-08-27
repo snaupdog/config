@@ -1,4 +1,9 @@
-require("toggleterm").setup{}
+require("toggleterm").setup{
+
+tag = '*', config = function()
+end,
+
+}
 
 
 
