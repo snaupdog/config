@@ -28,18 +28,12 @@ end
 
 return packer.startup(function(use)
 
+require('packer').startup(function(use)
 
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+end)
     -- use "ziontee113/color-picker.nvim"
-
-    use 'nvim-telescope/telescope.nvim'
-
-
     use 'wbthomason/packer.nvim'
-    use 'xiyaowong/transparent.nvim'
-    use 'folke/tokyonight.nvim'
-
-    -- lsp
-
     use {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -48,11 +42,20 @@ return packer.startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'L3MON4D3/LuaSnip'
-    use  'saadparwaiz1/cmp_luasnip'
     use  "rafamadriz/friendly-snippets"
+    use  'saadparwaiz1/cmp_luasnip'
+
+    use 'folke/tokyonight.nvim'
+
+    -- lsp
 
     use "akinsho/toggleterm.nvim"
 
+    use 'nvim-telescope/telescope.nvim'
+
+    use 'eandrju/cellular-automaton.nvim'
+
+    use 'xiyaowong/transparent.nvim'
     use 'kylechui/nvim-surround'
     use "windwp/nvim-autopairs"
     use 'numToStr/Comment.nvim'

@@ -6,16 +6,21 @@ local silent = { silent = true }
 local keymap = vim.keymap -- for conciseness
 local opts = { noremap = true, silent = true }
 local map = vim.api.nvim_set_keymap
+local builtin = require('telescope.builtin')
+
+
+keymap.set('n', '<leader>ps', function()
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end)
 
 keymap.set('n','<leader>n',':NvimTreeToggle<CR>')
 
 keymap.set('n','<leader>w','<C-w>w')
 
-keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
-keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-
+-- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
+-- keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+-- keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
+-- keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 
 
 
@@ -42,12 +47,8 @@ map("x", "J", ":move '>+1<CR>gv-gv", silent)
 map("v", "<", "<gv", silent)
 map("v", ">", ">gv", silent)
 
--- Save file by CTRL-S
-map("n", "<C-s>", ":w<CR>", silent)
-map("i", "<C-s>", "<ESC> :w<CR>", silent)
 
 
--- map("n", "<leader>gn", ":NvimTreeFocus<CR>", opts)
 
 -- Buffers
 map("n", "gn", ":bn<CR>", silent)

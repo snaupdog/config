@@ -6,3 +6,6 @@ options = { theme = 'powerline'},
 
 requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
+
+
+

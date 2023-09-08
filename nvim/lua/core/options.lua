@@ -1,6 +1,7 @@
 
 
- vim.cmd[[colorscheme tokyonight-night]]
+ -- vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd('colorscheme rose-pine')
 
 
 local options ={

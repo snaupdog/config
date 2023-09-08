@@ -15,3 +15,12 @@ require("core.plugin_config.toggleterm")
 -- require("core.plugin_config.color-picker")
 
 require("core.plugin_config.colorizer")
+
+
+
+
+
+
+
+
+

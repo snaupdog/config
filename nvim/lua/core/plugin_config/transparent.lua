@@ -10,7 +10,7 @@ require("transparent").setup({
     "NvimTreeNormal", -- NvimTree
     "NvimTreeToggle",
     "NvimTree",
-    
+    "ToggleTerm",
     }, -- table: additional groups that should be cleared
   exclude_groups = {}, -- table: groups you don't want to clear
 })
