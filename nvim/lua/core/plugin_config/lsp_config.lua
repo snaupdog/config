@@ -3,8 +3,6 @@ require("mason-lspconfig").setup()
 
 
 
-
-
 require("mason-lspconfig").setup{
 ensure_installed = {
     "html",
@@ -15,6 +13,7 @@ ensure_installed = {
     "tsserver",
     "eslint",
     "pylsp",
+    "emmet_ls"
 },
 }
 
@@ -71,6 +70,10 @@ require("lspconfig")["lua_ls"].setup({
 	capabilities = capabilities,
 })
 
+require("lspconfig")["emmet_ls"].setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 --
 --
 -- local on_attach =function(_, _)
